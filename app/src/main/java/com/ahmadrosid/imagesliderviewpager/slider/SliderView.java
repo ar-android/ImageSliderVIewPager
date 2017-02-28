@@ -33,15 +33,15 @@ public class SliderView extends ViewPager {
         init();
     }
 
-    private void init() {
-        setDurationScroll(DEFAULT_SCROLL_DURATION);
-        this.setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-    }
+        private void init() {
+            setDurationScroll(DEFAULT_SCROLL_DURATION);
+            this.setOnTouchListener(new OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    return true;
+                }
+            });
+        }
 
     public void setDurationScroll(int millis) {
         try {
