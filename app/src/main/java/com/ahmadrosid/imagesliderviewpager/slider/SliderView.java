@@ -3,6 +3,8 @@ package com.ahmadrosid.imagesliderviewpager.slider;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
 
@@ -33,6 +35,12 @@ public class SliderView extends ViewPager {
 
     private void init() {
         setDurationScroll(DEFAULT_SCROLL_DURATION);
+        this.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
     }
 
     public void setDurationScroll(int millis) {
